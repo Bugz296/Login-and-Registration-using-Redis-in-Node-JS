@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Index</title>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="sub-container">
+            </div>
+            <form action="/login" method="post" autocomplete="on">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="5">
+                                <h1>Login</h1>
+                                <%
+                                    if(msg){ %>
+                                        <h3><%= msg %></h3>
+                                <%  } %>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Email: </td>
+                            <td><input type="text" name="email"></td>
+                            <td>Password: </td>
+                            <td><input type="password" name="password"></td>
+                            <td><input type="submit" value="Login"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <form action="/register" method="post" autocomplete="on">
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2">
+                                <h1>Register</h1>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>First Name: </td>
+                            <td><input type="text" name="first_name"></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name: </td>
+                            <td><input type="text" name="last_name"></td>
+                        </tr>
+                        <tr>
+                            <td>Email Address: </td>
+                            <td><input type="text" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Password: </td>
+                            <td><input type="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password: </td>
+                            <td><input type="password" name="confirm_password"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Register">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
